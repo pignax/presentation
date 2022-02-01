@@ -7,15 +7,15 @@ import Presentation from "./components/Presentation/Presentation";
 function App() {
   const [data, setData] = useState();
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   async function getData() {
     const response = await fetch("http://localhost:3001/data.json");
     const responseData = await response.json();
     return setData(responseData);
   }
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <BrowserRouter>

@@ -4,8 +4,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import PresentationItems from "../PresentationItems/PresentationItems";
 
 function Presentation({data}) {
-  const school = data.school;
-  const work = data.work;
+  const school = data?.school;
+  const work = data?.work;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
