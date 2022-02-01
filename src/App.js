@@ -1,15 +1,20 @@
 import React from "react";
+import "./style/index.css";
+import data from "./data/data.json";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Presentation from "./components/Presentation/Presentation";
-import "./style/index.css";
 
 function App() {
+  console.log("Data", data);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/presentation" element={<Presentation />}></Route>
+        <Route
+          path="/presentation"
+          element={<Presentation data={data} />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
