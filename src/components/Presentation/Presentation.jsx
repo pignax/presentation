@@ -7,7 +7,6 @@ function Presentation({data}) {
   const school = data.school;
   const work = data.work;
   const [isOpen, setIsOpen] = useState(false);
-  const buttonOpenModal = <button className="App-button custom" onClick={() => setIsOpen(true)}>scopri altro..</button>;
 
   return (
     <Parallax pages={2} style={{ top: "0", left: "0", backgroundColor: "#4ca1af" }}>
@@ -21,7 +20,7 @@ function Presentation({data}) {
         }}
       >
       <div className="App-wrap">
-        <PresentationItems data={school} buttonOpenModal={buttonOpenModal} isOpen={isOpen} setIsOpen={setIsOpen} /> 
+        <PresentationItems data={school} isOpen={isOpen} setIsOpen={setIsOpen} /> 
       </div>
       </ParallaxLayer>
 
@@ -41,7 +40,7 @@ function Presentation({data}) {
         }}
       >
         <div className="App-wrap">
-        <PresentationItems data={work} buttonOpenModal={buttonOpenModal} isOpen={isOpen} setIsOpen={setIsOpen} /> 
+        <PresentationItems data={work} isOpen={isOpen} setIsOpen={setIsOpen} /> 
         </div>
       </ParallaxLayer>
    </Parallax>
