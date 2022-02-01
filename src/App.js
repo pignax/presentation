@@ -5,14 +5,14 @@ import Home from "./components/Home/Home";
 import Presentation from "./components/Presentation/Presentation";
 
 function App() {
+  const URL = `${window.location.origin}/data.json`;
   const [data, setData] = useState();
-
   useEffect(() => {
     getData();
   }, []);
 
   async function getData() {
-    const response = await fetch("http://localhost:3001/data.json");
+    const response = await fetch(URL);
     const responseData = await response.json();
     return setData(responseData);
   }
