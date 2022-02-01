@@ -6,7 +6,6 @@ import Home from "./components/Home/Home";
 import Presentation from "./components/Presentation/Presentation";
 
 function App() {
-  console.log("Data", data);
   return (
     <BrowserRouter>
       <Routes>
