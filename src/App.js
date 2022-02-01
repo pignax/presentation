@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./style/index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Presentation from "./components/Presentation/Presentation";
 
 function App() {
-  const URL = `${window.location.origin}/data.json`;
+  const locale = window.location.origin.toString();
+  const URL = `${locale}/data.json`;
+
   const [data, setData] = useState();
   useEffect(() => {
     getData();
@@ -18,15 +20,13 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route
-          path="/presentation"
-          element={<Presentation data={data} />}
-        ></Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route
+        path="/presentation"
+        element={<Presentation data={data} />}
+      ></Route>
+    </Routes>
   );
 }
 
