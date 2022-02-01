@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style/index.css";
-import data from "./data/data.json";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Presentation from "./components/Presentation/Presentation";
 
 function App() {
+  const [data, setData] = useState();
+
+  async function getData() {
+    const response = await fetch("http://localhost:3001/data.json");
+    const responseData = await response.json();
+    return setData(responseData);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
