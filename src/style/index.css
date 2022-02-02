@@ -42,6 +42,22 @@ code {
   color: white;
 }
 
+.App-containerParallax {
+  top: 0;
+  left: 0;
+  background-color: #4ca1af;
+}
+
+.App-parallexColor {
+  background-color: #ff6d6d;
+}
+
+.App-parallex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-wrap {
   margin-top: 50px;
   margin-bottom: 50px;

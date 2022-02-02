@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../../style/index.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import PresentationItems from "../PresentationItems/PresentationItems";
@@ -8,15 +8,11 @@ function Presentation({data}) {
   const work = data?.work;
 
   return (
-    <Parallax pages={2} style={{ top: "0", left: "0", backgroundColor: "#4ca1af" }}>
+    <Parallax pages={2} className="App-containerParallax">
       <ParallaxLayer
         offset={0}
         speed={2.5}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className="App-parallex"
       >
       <div className="App-wrap">
         <PresentationItems data={school} /> 
@@ -26,17 +22,13 @@ function Presentation({data}) {
       <ParallaxLayer
         offset={1}
         speed={2}
-        style={{ backgroundColor: "#ff6d6d" }} />
+        className="App-parallexColor"
+      />
 
       <ParallaxLayer
         offset={1}
         speed={0.5}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-        }}
+        className="App-parallex"
       >
         <div className="App-wrap">
         <PresentationItems data={work} /> 
