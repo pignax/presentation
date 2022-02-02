@@ -6,7 +6,6 @@ import PresentationItems from "../PresentationItems/PresentationItems";
 function Presentation({data}) {
   const school = data?.school;
   const work = data?.work;
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Parallax pages={2} style={{ top: "0", left: "0", backgroundColor: "#4ca1af" }}>
@@ -20,7 +19,7 @@ function Presentation({data}) {
         }}
       >
       <div className="App-wrap">
-        <PresentationItems data={school} isOpen={isOpen} setIsOpen={setIsOpen} /> 
+        <PresentationItems data={school} /> 
       </div>
       </ParallaxLayer>
 
@@ -40,7 +39,7 @@ function Presentation({data}) {
         }}
       >
         <div className="App-wrap">
-        <PresentationItems data={work} isOpen={isOpen} setIsOpen={setIsOpen} /> 
+        <PresentationItems data={work} /> 
         </div>
       </ParallaxLayer>
    </Parallax>

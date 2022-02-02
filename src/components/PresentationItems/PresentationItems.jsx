@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../style/index.css';
-import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 
-function PresentationItems({data, isOpen, setIsOpen}) {
+function PresentationItems({data}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalData, setModalData] = useState();
   return (
     <div className="App-wrap">
         <h1>{data?.name}</h1>
@@ -12,13 +13,10 @@ function PresentationItems({data, isOpen, setIsOpen}) {
             <div key={key}>
               <h2>{item?.name}</h2>
               <h3>{item?.title}</h3>
-              <Button setIsOpen={setIsOpen} />
-              <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-                <img className="App-img" src={item?.img.src} alt={item?.img.alt} />
-                <p>{item?.description}</p>
-              </Modal>
+              <button className="App-button custom" onClick={() => {setIsOpen(true); setModalData(item)}}>scopri altro..</button>
             </div>
           )}
+           <Modal open={isOpen} image={modalData?.img} description={modalData?.description} onClose={() => setIsOpen(false)} />
         </div>
     </div>
   );

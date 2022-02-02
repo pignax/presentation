@@ -3,7 +3,7 @@
        "name" : "FORMAZIONE",
        "items": [
              {"name": "Mohole", "title": "Corso post diploma", "description":"Argomenti e tecnologie studiati e applicati durante il percorso formativo: Wireframe, Layout, Photoshop, Illustrator, UI, UX, Web Design, HTML5, CSS3, Less, Sass, JavaScript, React, app ibride, Wordpress, PHP, MySql", "img": {"src":"https://picsum.photos/600", "alt": "alt"}},
-             {"name": "ITIS E.FERRARI", "title": "Diploma", "description":"Argomenti e tecnologie studiati e applicati durante il percorso formativo: Wireframe, Layout, Photoshop, Illustrator, UI, UX, Web Design, HTML5, CSS3, Less, Sass, JavaScript, React, app ibride, Wordpress, PHP, MySql", "img": {"src":"https://picsum.photos/600", "alt": "alt"}}
+             {"name": "ITIS E.FERRARI", "title": "Diploma", "description":"Argomenti e tecnologie studiati e applicati durante il percorso formativo: C, C#, Arduino, HTML5, CSS3, JavaScript, PHP, MySql, Wordpress", "img": {"src":"https://picsum.photos/600", "alt": "alt"}}
           ]
     },
     "work": {
